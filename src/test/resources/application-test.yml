@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: poc-h2
+    version: 1.0
+  datasource:
+    url: jdbc:h2:mem:local
+    driver-class-name: org.h2.Driver
+    username: admin
+    password: 123
+    hikari:
+      maximum-pool-size: 1
+  h2:
+    console:
+      path: /h2
+      enable: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: ${SERVER_PORT:8091}
+  servlet:
+    context-path: /${spring.application.name}

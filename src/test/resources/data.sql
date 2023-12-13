@@ -1,0 +1,2 @@
+insert into endereco (id, cep,cidade,logradouro,numero,complemento)values (1,'76821436','Porto Velho','Avenida Vigésima','6134','bloco G');
+insert into usuario (id,cpf,nome,endereco_id) values (2,'11111111111','Luciano Test',1);
